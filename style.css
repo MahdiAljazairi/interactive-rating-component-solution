@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css2?family=Overpass:wght@400;700);
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template: "... .... ..." 1fr
+                 "... card ..." auto
+                 "... attr ..." 1fr
+                / 1fr auto 1fr;
+  min-height: 100vh;
+  background: #121417; /* Very Dark Blue */
+  color: #959eac; /* Light Gray */
+  font-family: Overpass, sans-serif;
+}
+
+h1, h2, h3 {
+  color: white;
+  margin-bottom: .5em;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  color: #fb7413; /* Orange */
+  text-decoration-color: transparent;
+  outline-offset: .4em;
+  transition: text-decoration-color 100ms ease-out;
+}
+
+a:active,
+a:hover {
+  text-decoration-color: #fb7413; /* Orange */
+}
+
+#rating-component {
+  grid-area: card;
+}
+
+#rating-component.thank-you .rating-state {
+  display: none;
+}
+
+#rating-component.thank-you .thank-you-state {
+  display: flex;
+}
+
+.card {
+  padding: 1.4rem 1.25rem 1.8rem;
+  margin: 1.25rem;
+  max-width: 25.4rem;
+  background: #252d37; /* Dark Blue */
+  border-radius: 1.1rem;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+}
+
+.dialog {
+  margin: 1.4rem 0;
+}
+
+/*----------------------------------------------------------------------*/
+
+.rating-state .icon img {
+  width: 15px;
+}
+
+#rate-group {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+button,
+[type="radio"] + label {
+  font: inherit;
+  font-weight: 700;
+  outline-offset: .2em;
+  cursor: pointer;
+  transition: color            150ms ease-out,
+              background-color 150ms ease-out;
+}
+
+[type="radio"] {
+  width: 0;
+  position: absolute;
+}
+
+.rating-state .icon,
+[type="radio"] + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  background: rgba(124,135,152,.2); /* Medium Grey 20% */
+  border-radius: 50%;
+}
+
+[type="radio"]:focus-visible + label {
+  outline: black auto 1px;
+}
+
+[type="radio"]:focus + label,
+[type="radio"]:hover + label {
+  background: #7c8798; /* Medium Grey */
+  color: white;
+}
+
+[type="radio"]:checked + label {
+  background: #fb7413; /* Orange */
+  color: white;
+}
+
+button.primary-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  background: #fb7413; /* Orange */
+  color: white;
+  text-transform: uppercase;
+  padding: 1em 0 .8em;
+  border-radius: 500vh;
+  letter-spacing: .2em;
+}
+
+button.primary-btn:active,
+button.primary-btn:hover {
+  background: white;
+  color: #fb7413; /* Orange */
+}
+
+/*----------------------------------------------------------------------*/
+
+.thank-you-state {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thank-you-state img {
+  width: 145px;
+}
+
+.thank-you-state output {
+  display: block;
+  font-size: 15px;
+  margin: 1.5em 0 .5em;
+  padding: .6em 1.2em .4em;
+  line-height: 1;
+  background: rgba(124,135,152,.2); /* Medium Grey 20% */
+  color: #fb7413; /* Orange */
+  border-radius: 500vh;
+}
+
+.thank-you-state .dialog {
+  margin-bottom: 1rem;
+}
+
+/*----------------------------------------------------------------------*/
+
+.attribution {
+  grid-area: attr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+  margin-bottom: 1.4rem;
+}
+
+/*----------------------------------------------------------------------*/
+
+
+@media (min-width: 400px) {
+  .card {
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+  
+  .rating-state .icon img {
+    width: auto;
+  }
+  
+  .rating-state .icon,
+  [type="radio"] + label {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .attribution {
+    font-size: .7rem;
+  }
+}
+
+
+

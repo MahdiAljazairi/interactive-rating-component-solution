@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="card" id="rating-component" aria-live="assertive">
+    <div class="rating-state">
+      
+      <div class="icon">
+        <img src="images/icon-star.svg" alt="">
+      </div>
+      
+      <div class="dialog">
+        <h3>How did we do?</h3>
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+        </p>
+      </div>
+      
+      <form id="rating-form">
+        <fieldset id="rate-group">
+          <input type="radio" name="rate" value="1" id="rate-1">
+          <label for="rate-1">1</label>
+          
+          <input type="radio" name="rate" value="2" id="rate-2">
+          <label for="rate-2">2</label>
+          
+          <input type="radio" name="rate" value="3" id="rate-3">
+          <label for="rate-3">3</label>
+          
+          <input type="radio" name="rate" value="4" id="rate-4">
+          <label for="rate-4">4</label>
+          
+          <input type="radio" name="rate" value="5" id="rate-5">
+          <label for="rate-5">5</label>
+        </fieldset>
+        
+        <button type="button" class="primary-btn" name="submit">Submit</button>
+      </form>
+    </div>
+    
+    <div class="thank-you-state">
+      <img src="images/illustration-thank-you.svg" alt="">
+      <output id="rating-result">You selected # out of 5</output>
+      
+      <div class="dialog">
+        <h3>Thank you!</h3>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  
+  <!-- ATTRIBUTION -->
+  
+  <div class="attribution">
+    Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by&nbsp;<a href="https://www.frontendmentor.io/profile/MahdiAljazairi" target="_blank">Mahdi Aljaza'iri</a>.
+  </div>
+</body>
+</html>
+
+
+
