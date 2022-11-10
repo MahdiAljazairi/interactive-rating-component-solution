@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: <https://your-solution-url.com>
-- Live Site URL: <https://your-live-site-url.com>
+- Solution URL: <https://www.frontendmentor.io/solutions/the-wise-boiled-potato-WAiRu4w3JU>
+- Live Site URL: <https://interactive-rating-component-solution.netlify.app>
 
 ## My process
 
