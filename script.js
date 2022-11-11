@@ -7,6 +7,9 @@ var btnSubmit = form.elements["submit"];
 var outResult = document.getElementById("rating-result");
 
 
+form.addEventListener("change", function(e){
+  btnSubmit.disabled = false;
+});
 
 btnSubmit.addEventListener("click", function(e){
   if (inRate.value) {
@@ -14,6 +17,3 @@ btnSubmit.addEventListener("click", function(e){
     outResult.innerText = "You selected " + inRate.value + " out of 5";
   }
 });
-
-
-

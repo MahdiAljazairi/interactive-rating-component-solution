@@ -88,7 +88,8 @@ button,
   outline-offset: .2em;
   cursor: pointer;
   transition: color            150ms ease-out,
-              background-color 150ms ease-out;
+              background-color 150ms ease-out,
+              opacity          150ms ease-out;
 }
 
 [type="radio"] {
@@ -122,6 +123,11 @@ button,
   color: white;
 }
 
+button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
 button.primary-btn {
   display: block;
   width: 100%;
@@ -134,8 +140,8 @@ button.primary-btn {
   letter-spacing: .2em;
 }
 
-button.primary-btn:active,
-button.primary-btn:hover {
+button.primary-btn:enabled:active,
+button.primary-btn:enabled:hover {
   background: white;
   color: #fb7413; /* Orange */
 }
